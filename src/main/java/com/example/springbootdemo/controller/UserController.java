@@ -2,6 +2,7 @@ package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.dao.UserMapper;
 import com.example.springbootdemo.domain.User;
+import com.example.springbootdemo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,23 +12,26 @@ import java.util.List;
 
 @Controller
 public class UserController {
+//    @Autowired
+//    private IUserService userService;
     @Autowired
     private UserMapper userMapper;
 
     /**
      * 查询所有用户信息
+     *
      * @return
      */
-    @RequestMapping(value = "/selectAll")
+    @RequestMapping(value = "selectAll")
     @ResponseBody
     public List<User> findAllUser() {
         return userMapper.findAll();
     }
 
     @RequestMapping(value = "/insertUser")
-    public String addUser(){
+    public String addUser() {
         User user = new User();
-        user.setName("wanger02");
+        user.setName("wanger08");
         user.setAge(15);
         user.setEmail("4588666121@163.com");
         userMapper.addUser(user.getName(), user.getAge(), user.getEmail());
@@ -43,9 +47,6 @@ public class UserController {
         userMapper.deleteUserById(id);
         return "del_success";
     }
-
-
-
 
 
 }
