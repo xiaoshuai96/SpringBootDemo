@@ -1,6 +1,21 @@
-# springboot整合mybatis框架实现增删改查
-## 用户表User
--------------------------------
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost
+Source Server Version : 50730
+Source Host           : localhost:3306
+Source Database       : test
+
+Target Server Type    : MYSQL
+Target Server Version : 50730
+File Encoding         : 65001
+
+Date: 2020-06-10 16:14:33
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -23,4 +38,4 @@ INSERT INTO `user` VALUES ('5', 'Billie', '24', 'test5@baomidou.com');
 INSERT INTO `user` VALUES ('6', 'xiaohua', '45', '1174320669@qq.com');
 INSERT INTO `user` VALUES ('7', 'zhangsi', '18', '156568989@163.com');
 INSERT INTO `user` VALUES ('11', 'wanger02', '15', '4588666121@163.com');
-INSERT INTO `user` VALUES ('12', 'wanger02', '15', '4588666121@163.com');s
+INSERT INTO `user` VALUES ('12', 'wanger02', '15', '4588666121@163.com');
